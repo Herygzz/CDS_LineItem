@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition para Docs. de Vtas'
+define service Zsd_sales {
+  expose zdd_sd_header_proj;
+  expose zdd_sd_items_proj;
+}

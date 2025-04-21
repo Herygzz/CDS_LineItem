@@ -1,0 +1,57 @@
+@Metadata.layer: #CORE
+//@UI: {
+//headerInfo:{
+//             typeName: 'Pedido de Ventas',
+//       typeNamePlural: 'Pedidos de Ventas',
+//                title: {
+//                         type: #STANDARD, label: 'Ped. Vtas'
+//                       },
+//          description: { value: 'VBELN' }
+//           }
+//      }
+
+@UI.headerInfo: {
+    typeName: 'Pedido de Ventas',
+    typeNamePlural: 'Pedidos de Vtas'
+}
+annotate entity zdd_sd_header_proj with
+{
+
+  @UI.facet: [{ id: 'SDHeaderDoc', purpose: #HEADER,   label: 'Cabecera Pedido de Ventas', type: #COLLECTION , position: 10 },
+              { id: 'SDOrgInf',    purpose: #STANDARD, label: 'Inf. Organizacional',       type: #COLLECTION , position: 20 },
+
+              { id: 'Hdr',      type: #FIELDGROUP_REFERENCE, parentId: 'SDHeaderDoc', label:'Inf. Cabecera', targetQualifier: '_HdrInf', position: 10 },
+              { id: 'OrgInf',   type: #FIELDGROUP_REFERENCE, parentId: 'SDOrgInf',    label:'Inf. Org.',     targetQualifier: '_OrgInf', position: 20 },
+
+              { id: 'Items', purpose: #STANDARD, type: #LINEITEM_REFERENCE, label: 'Posiciones del Pedido de Ventas.', position: 30, targetElement: '_It'}
+             ]
+
+  @UI.fieldGroup: [{ qualifier: '_HdrInf', position: 10 }]
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  Vbeln;
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  Erdat;
+  @UI.lineItem: [{ position: 40, importance: #HIGH }]
+  Erzet;
+  @UI.lineItem: [{ position: 50, importance: #HIGH }]
+  Auart;
+  @UI.lineItem: [{ position: 60, importance: #HIGH }]
+  Netwr;
+  @UI.lineItem: [{ position: 70, importance: #HIGH }]
+  Waerk;
+  @UI.fieldGroup: [{ qualifier: '_OrgInf', position: 10 }]
+  @UI.lineItem: [{ position: 80, importance: #HIGH }]
+  Vkorg;
+  @UI.fieldGroup: [{ qualifier: '_OrgInf', position: 20 }]
+  @UI.lineItem: [{ position: 90, importance: #HIGH }]
+  Vtweg;
+  @UI.fieldGroup: [{ qualifier: '_OrgInf', position: 30 }]
+  @UI.lineItem: [{ position: 100, importance: #HIGH }]
+  Spart;
+  @UI.fieldGroup: [{ qualifier: '_OrgInf', position: 40 }]
+  @UI.lineItem: [{ position: 110, importance: #HIGH }]
+  Kunnr;
+  //  /* Associations */
+  //    _Items;
+
+}

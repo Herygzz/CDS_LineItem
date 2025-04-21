@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+annotate entity zdd_sd_items_proj with
+{
+  //  @UI.hidden: true
+  @UI.lineItem: [{ position: 5, importance: #HIGH }]
+  Vbeln;
+  @UI.lineItem: [{ position: 10, importance: #HIGH }]
+  Posnr;
+  @UI.lineItem: [{ position: 20, importance: #HIGH }]
+  Matnr;
+  @UI.lineItem: [{ position: 30, importance: #HIGH }]
+  Arktx;
+  @UI.lineItem: [{ position: 40, importance: #HIGH }]
+  Meins;
+  @UI.lineItem: [{ position: 50, importance: #HIGH }]
+  Netwr;
+  @UI.lineItem: [{ position: 60, importance: #HIGH }]
+  Waerk;
+  @UI.lineItem: [{ position: 70, importance: #HIGH }]
+  Kwmeng;
+  @UI.lineItem: [{ position: 80, importance: #HIGH }]
+  Vrkme;
+  @UI.lineItem: [{ position: 90, importance: #HIGH }]
+  Werks;
+  @UI.lineItem: [{ position: 100, importance: #HIGH }]
+  Netpr;
+  //    /* Associations */
+  //    _header;
+
+}
